@@ -1,14 +1,21 @@
-import GithubSvg from "components/logos/GithubSvg";
+import { GithubSvg } from "components/logos/GithubSvg";
 import { signIn } from "next-auth/react";
+import { FC } from "react";
+import { ButtonPropsType } from "./button.types";
 
-export default function LoginButton() {
+export const LoginButton: FC<ButtonPropsType> = ({ onClick }) => {
+  const handleOnClick = () => {
+    signIn("github");
+    onClick && onClick();
+  };
+
   return (
     <button
-      className="border-2 border-black rounded p-2"
-      onClick={() => signIn("github")}
+      className="text-sm rounded bg-green-700 text-white p-1 pl-2 pr-2 inline-flex items-center justify-center hover:bg-opacity-80"
+      onClick={handleOnClick}
     >
       <GithubSvg width={24} height={24} />
-      Entrar
+      Iniciar sesión con Github
     </button>
   );
-}
+};

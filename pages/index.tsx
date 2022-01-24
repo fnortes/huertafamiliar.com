@@ -1,11 +1,8 @@
 import type { NextPage } from "next";
-import { signOut, useSession } from "next-auth/react";
 import Head from "next/head";
-import LoginButton from "components/buttons/LoginButton";
+import { Header } from "components/Header";
 
 const Home: NextPage = () => {
-  const { data: session } = useSession();
-
   return (
     <>
       <Head>
@@ -14,19 +11,14 @@ const Home: NextPage = () => {
         </title>
         <meta
           name="description"
-          content="huertafamiliar.com es una App para ayudarte a organizar y gestionar tu huerta familiar y sus cultivos de la forma más rápida y cómoda."
+          content="huertafamiliar.com es una web para ayudarte a organizar y gestionar tu huerta familiar y sus cultivos de la forma más rápida y cómoda."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        {session ? (
-          <>
-            Logueado como {session.user?.email} <br />
-            <button onClick={() => signOut()}>Salir</button>
-          </>
-        ) : (
-          <LoginButton />
-        )}
+      <main className="bg-green-50 min-h-screen flex flex-col items-center">
+        <div className="w-full max-w-4xl p-2">
+          <Header />
+        </div>
       </main>
     </>
   );
