@@ -8,6 +8,12 @@ module.exports = {
       gridTemplateColumns: {
         "auto-max-content": "auto max-content",
       },
+      colors: {
+        green: {
+          primary: "#7fb241",
+          secondary: "#719c40",
+        },
+      },
     },
   },
   plugins: [],

@@ -10,7 +10,7 @@ export const Logo: ElementType = () => (
       className="inline-flex items-center"
     >
       <LogoSvg />
-      <span className="ml-2 text-xl font-bold tracking-wide">
+      <span className="ml-2 text-xl font-bold tracking-wide text-green-primary">
         huertafamiliar.com
       </span>
     </a>

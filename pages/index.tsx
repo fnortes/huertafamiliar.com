@@ -29,16 +29,20 @@ const Home: NextPage = () => {
             <div className="mb-12 lg:max-w-lg lg:pr-5 lg:mb-0">
               <div className="max-w-xl mb-6">
                 <h2 className="max-w-lg mb-6 text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none">
-                  Organizar tu huerta familiar fácil y rápido
+                  Organizar tu{" "}
+                  <span className="text-orange-600 uppercase font-extrabold">
+                    huerta familiar
+                  </span>{" "}
+                  fácil y rápido
                 </h2>
-                <p className="text-base md:text-lg">
+                <p className="text-base md:text-lg text-gray-700">
                   <strong>huertafamiliar.com</strong> es una web para ayudarte a
                   organizar y gestionar tu huerta familiar y sus cultivos de la
                   forma más rápida y cómoda.
                 </p>
               </div>
               <hr className="mb-6 border-gray-300" />
-              <div className="flex">
+              <div className="flex text-gray-700">
                 Poner aquí un listado de la features disponibles. Por ejemplo un
                 listado de cards con capturas de ejemplo, etc...
               </div>
