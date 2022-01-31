@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { SvgPropsType } from "./logo.types";
+import { SvgPropsType } from "../logos/logo.types";
 
 export const GithubSvg: FC<SvgPropsType> = ({ width = 96, height = 96 }) => (
   <svg

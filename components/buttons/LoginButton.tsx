@@ -1,4 +1,4 @@
-import { GithubSvg } from "components/logos/GithubSvg";
+import { GithubSvg } from "components/login/GithubSvg";
 import { signIn } from "next-auth/react";
 import { FC } from "react";
 import { ButtonPropsType } from "./button.types";

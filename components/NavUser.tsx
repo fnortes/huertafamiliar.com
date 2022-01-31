@@ -13,7 +13,7 @@ export const NavUser: FC<HeaderPropsType> = ({
   if (status === "loading" || userLoading) return <Loader />;
   if (status === "authenticated" && session?.user)
     return (
-      <div className="flex justify-end">
+      <div className="flex justify-end h-full items-center">
         <DropdownUser
           user={session.user}
           onClickExitButton={onClickExitButton}

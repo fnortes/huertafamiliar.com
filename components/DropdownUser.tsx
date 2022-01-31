@@ -32,7 +32,9 @@ export const DropdownUser: FC<DropdownUserPropsType> = ({
                 alt={name || ""}
               />
             )}
-            <span className="ml-2">{name}</span>
+            <span className="ml-2 w-24 text-ellipsis overflow-hidden whitespace-nowrap">
+              {name}
+            </span>
             <ChevronDownIcon className="h-5 w-5" />
           </Menu.Button>
         </div>
@@ -45,7 +47,7 @@ export const DropdownUser: FC<DropdownUserPropsType> = ({
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-0 w-56 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <Menu.Items className="absolute right-0 w-44 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
             <div className="px-1 py-1 ">
               <Menu.Item>
                 {({ active }) => (

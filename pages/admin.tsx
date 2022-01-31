@@ -28,7 +28,7 @@ const Admin: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="bg-green-50 min-h-screen flex flex-col items-center">
-        <div className="w-full p-2">
+        <div className="w-full">
           <Header
             userLoading={userLoading}
             onClickExitButton={() => setUserLoading(true)}
