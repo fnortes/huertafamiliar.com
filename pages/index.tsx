@@ -1,11 +1,21 @@
 import { Header } from "components/Header";
 import { Login } from "components/login/Login";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import type { NextPage } from "next";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
+  const { status } = useSession();
+  const { push } = useRouter();
   const [userLoading, setUserLoading] = useState(false);
+
+  useEffect(() => {
+    if (status === "authenticated") {
+      push("/admin");
+    }
+  }, [status, push]);
 
   return (
     <>

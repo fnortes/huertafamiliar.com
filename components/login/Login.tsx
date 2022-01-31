@@ -8,11 +8,11 @@ export const Login: FC<LoginPropsType> = ({
   userLoading,
   onClickLoginButton,
 }) => {
-  const { data: session, status } = useSession();
+  const { status } = useSession();
 
   if (status === "loading" || userLoading) return <Loader />;
   if (status === "unauthenticated")
     return <Unauthenticated onClickLoginButton={onClickLoginButton} />;
 
-  return <>Logueado como {session?.user?.email}</>;
+  return null;
 };
